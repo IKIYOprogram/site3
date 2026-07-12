@@ -1,7 +1,8 @@
 import streamlit as st  
 from google import genai
 def inicializar_cliente():
-   return genai.Client(api_key=st.secrets["GEMINI_API_KEY"], vertexai=True, location="global")
+   os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+   return genai.Client(vertexai=True, )
 cliente = inicializar_cliente()
 test1='IAmiga'
 st.title(test1) 
