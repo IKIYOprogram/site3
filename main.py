@@ -1,4 +1,5 @@
 import streamlit as st  
+import os
 from google import genai
 def inicializar_cliente():
    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
